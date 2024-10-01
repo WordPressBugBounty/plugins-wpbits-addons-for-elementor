@@ -1,0 +1,80 @@
+.wpb-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+.wpb-counter.h-layout {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.wpb-counter.h-layout-alt {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.wpb-counter.v-layout {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wpb-counter.h-layout-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.wpb-counter.h-layout-reverse-alt {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.wpb-counter.v-layout-reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.wpb-counter-icon {
+  font-size: 30px;
+  line-height: 2;
+  text-align: center;
+}
+
+.wpb-counter-number {
+  font-size: 60px;
+  line-height: 1;
+}
+.wpb-counter-number span {
+  display: inline-block;
+}
+
+.wpb-counter-title {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.wpb-counter-separator {
+  border-width: 0 0 var(--s-border-width) 0;
+  border-style: solid;
+  border-color: var(--s-border-color);
+  width: var(--s-width);
+}

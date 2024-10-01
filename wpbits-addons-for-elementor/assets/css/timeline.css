@@ -1,0 +1,276 @@
+.wpbits-afe-timeline {
+  --indicator-height: 40px;
+  --indicator-width: 40px;
+  --indicator-color: #dddddd;
+  --line-color: #dddddd;
+  --line-size: 10px;
+  --grid-gap: 30px;
+  --content-box-width: 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  position: relative;
+}
+.wpbits-afe-timeline > ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.wpbits-afe-timeline > ul > li {
+  display: grid;
+  grid-template-columns: 1fr var(--indicator-width) 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: var(--grid-gap);
+  position: relative;
+}
+.wpbits-afe-timeline > ul > li:not(:last-child) {
+  margin-bottom: var(--grid-gap);
+}
+.wpbits-afe-timeline > ul > li > * {
+  grid-row: 1;
+}
+.wpbits-afe-timeline > ul > li .wpbits-afe-timeline-indicator {
+  grid-column: 2;
+}
+.wpbits-afe-timeline > ul > li .wpbits-afe-timeline-indicator:after {
+  height: calc( 100% + var(--grid-gap) );
+  position: absolute;
+  content: "";
+  width: var(--line-size);
+  background: var(--line-color);
+  top: 0;
+  -webkit-transform: translateX(-50%) translateY(calc( -1 * var(--grid-gap) / 2 ));
+          transform: translateX(-50%) translateY(calc( -1 * var(--grid-gap) / 2 ));
+}
+.wpbits-afe-timeline .wpbits-afe-timeline-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.wpbits-afe-timeline .wpbits-afe-timeline-content .wpbits-afe-timeline-content-image img {
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+.wpbits-afe-timeline .wpbits-afe-timeline-content-desc p {
+  padding: 0;
+  margin: 0 0 1.25em 0;
+}
+.wpbits-afe-timeline .wpbits-afe-timeline-content-desc p:last-child {
+  margin: 0;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-orientation-odd > ul > li:nth-child(odd) .wpbits-afe-timeline-content {
+  text-align: right;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-orientation-odd > ul > li:nth-child(odd) .wpbits-afe-timeline-content-image img {
+  margin-left: auto;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-orientation-odd > ul > li:nth-child(even) .wpbits-afe-timeline-date {
+  grid-column: 1;
+  text-align: right;
+  justify-self: flex-end;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-orientation-odd > ul > li:nth-child(even) .wpbits-afe-timeline-content {
+  grid-column: 3;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-orientation-even-right > ul > li {
+  grid-template-columns: 1fr var(--indicator-width) minmax(-webkit-max-content, 100px);
+  grid-template-columns: 1fr var(--indicator-width) minmax(max-content, 100px);
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-orientation-even-right > ul > li .wpbits-afe-timeline-content {
+  text-align: right;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-orientation-even-left > ul > li {
+  grid-template-columns: minmax(-webkit-max-content, 100px) var(--indicator-width) 1fr;
+  grid-template-columns: minmax(max-content, 100px) var(--indicator-width) 1fr;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-orientation-even-left > ul > li .wpbits-afe-timeline-date {
+  grid-column: 1;
+  text-align: right;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-orientation-even-left > ul > li .wpbits-afe-timeline-content {
+  grid-column: 3;
+}
+.wpbits-afe-timeline .wpbits-afe-timeline-indicator {
+  height: var(--indicator-height);
+  background: var(--indicator-color);
+  min-width: var(--indicator-width);
+  line-height: 0;
+  z-index: 1;
+}
+.wpbits-afe-timeline .wpbits-afe-timeline-content-heading {
+  margin: 0 0 .5em;
+  display: inline-block;
+}
+.wpbits-afe-timeline .wpbits-afe-timeline-content *:last-child {
+  margin: 0;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-left > ul > li {
+  grid-template-columns: var(--indicator-width) 1fr;
+  grid-template-rows: auto auto;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-left > ul > li .wpbits-afe-timeline-indicator {
+  grid-row: 1;
+  grid-column: 1 !important;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-left > ul > li .wpbits-afe-timeline-indicator:after {
+  -webkit-transform: none;
+          transform: none;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-left > ul > li .wpbits-afe-timeline-date {
+  grid-row: 1;
+  grid-column: 2 !important;
+  text-align: left !important;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-left > ul > li .wpbits-afe-timeline-content {
+  grid-row: 2;
+  grid-column: 2 !important;
+  text-align: left !important;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-left.line-center .wpbits-afe-timeline-indicator:after {
+  left: calc( var(--indicator-width) / 2 );
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-left.line-right .wpbits-afe-timeline-indicator:after {
+  left: var(--indicator-width);
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-left.line-left .wpbits-afe-timeline-indicator:after {
+  left: 0;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-right > ul:after {
+  left: calc( 100% - var( --indicator-width ) / 2  );
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-right > ul > li {
+  grid-template-columns: 1fr var(--indicator-width);
+  grid-template-rows: auto auto;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-right > ul > li .wpbits-afe-timeline-indicator {
+  grid-row: 1;
+  grid-column: 2 !important;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-right > ul > li .wpbits-afe-timeline-indicator:after {
+  left: auto;
+  -webkit-transform: none;
+          transform: none;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-right > ul > li .wpbits-afe-timeline-date {
+  grid-row: 1;
+  grid-column: 1 !important;
+  text-align: right !important;
+  justify-self: flex-end;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-right > ul > li .wpbits-afe-timeline-content {
+  grid-row: 2;
+  grid-column: 1 !important;
+  text-align: right !important;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-right > ul > li .wpbits-afe-timeline-content-image img {
+  margin-left: 0;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-right.line-center .wpbits-afe-timeline-indicator:after {
+  right: calc( var(--indicator-width) / 2 );
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-right.line-left .wpbits-afe-timeline-indicator:after {
+  right: var(--indicator-width);
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-right.line-right .wpbits-afe-timeline-indicator:after {
+  right: 0;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-center:after {
+  left: auto;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-center.line-center .wpbits-afe-timeline-indicator:after {
+  margin-left: calc( var(--indicator-width) / 2 );
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-center.line-left .wpbits-afe-timeline-indicator:after {
+  margin-left: 0;
+}
+.wpbits-afe-timeline.wpbits-afe-timeline-indicator-center.line-right .wpbits-afe-timeline-indicator:after {
+  margin-left: var(--indicator-width);
+}
+
+@media screen and (max-width: 768px) {
+  .elementor-widget-container .wpbits-afe-timeline > ul > li {
+    grid-template-columns: var(--indicator-width) 1fr !important;
+    grid-template-rows: auto auto;
+  }
+  .elementor-widget-container .wpbits-afe-timeline > ul > li .wpbits-afe-timeline-content .wpbits-afe-timeline-content-image img {
+    margin-left: 0;
+  }
+  .elementor-widget-container .wpbits-afe-timeline > ul > li .wpbits-afe-timeline-indicator {
+    grid-row: 1;
+    grid-column: 1 !important;
+  }
+  .elementor-widget-container .wpbits-afe-timeline > ul > li .wpbits-afe-timeline-indicator:after {
+    margin-left: calc( var(--indicator-width) / 2 );
+  }
+  .elementor-widget-container .wpbits-afe-timeline > ul > li .wpbits-afe-timeline-date {
+    grid-row: 1;
+    grid-column: 2 !important;
+    text-align: left !important;
+    justify-self: flex-start !important;
+  }
+  .elementor-widget-container .wpbits-afe-timeline > ul > li .wpbits-afe-timeline-content {
+    grid-row: 2;
+    grid-column: 2 !important;
+    text-align: left !important;
+  }
+}
+.rtl .wpbits-afe-timeline.wpbits-afe-timeline-indicator-left > ul > li {
+  direction: ltr;
+}
+.rtl .wpbits-afe-timeline.wpbits-afe-timeline-indicator-left > ul > li > * {
+  direction: rtl;
+}
+.rtl .wpbits-afe-timeline.wpbits-afe-timeline-indicator-right > ul > li {
+  direction: ltr;
+}
+.rtl .wpbits-afe-timeline.wpbits-afe-timeline-indicator-right > ul > li > * {
+  direction: rtl;
+}
+.rtl .wpbits-afe-timeline.wpbits-afe-timeline-orientation-odd > ul > li:nth-child(odd) .wpbits-afe-timeline-content {
+  text-align: left;
+}
+.rtl .wpbits-afe-timeline.wpbits-afe-timeline-orientation-odd > ul > li:nth-child(odd) .wpbits-afe-timeline-content-image img {
+  margin-right: auto;
+  margin-left: 0;
+}
+.rtl .wpbits-afe-timeline.wpbits-afe-timeline-orientation-odd > ul > li:nth-child(even) .wpbits-afe-timeline-date {
+  text-align: left;
+}
+.rtl .wpbits-afe-timeline.wpbits-afe-timeline-orientation-even > ul > li .wpbits-afe-timeline-content {
+  text-align: left;
+}
+.rtl .wpbits-afe-timeline.wpbits-afe-timeline-orientation-even > ul > li .wpbits-afe-timeline-content-image img {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .rtl .wpbits-afe-timeline.wpbits-afe-timeline-indicator-center > ul > li {
+    grid-template-columns: var(--indicator-width) 1fr;
+    grid-template-rows: auto auto;
+  }
+  .rtl .wpbits-afe-timeline.wpbits-afe-timeline-indicator-center > ul > li .wpbits-afe-timeline-indicator::after {
+    right: calc( var(--indicator-width) / 2 );
+    -webkit-transform: none;
+            transform: none;
+    left: auto;
+  }
+  .rtl .wpbits-afe-timeline.wpbits-afe-timeline-indicator-center > ul > li .wpbits-afe-timeline-date {
+    text-align: right !important;
+  }
+  .rtl .wpbits-afe-timeline.wpbits-afe-timeline-indicator-center > ul > li .wpbits-afe-timeline-content {
+    text-align: right !important;
+  }
+}

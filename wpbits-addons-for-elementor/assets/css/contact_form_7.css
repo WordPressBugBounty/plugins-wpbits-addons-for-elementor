@@ -1,0 +1,37 @@
+.wpb-form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wpb-form-wrapper > .wpcf7,
+.wpb-form-wrapper > .wpb-form-wrapper-inner {
+  width: 100%;
+}
+
+.wpb-cf7form input,
+.wpb-cf7form textarea {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  max-width: 100%;
+  outline: none !important;
+}
+
+input.wpcf7-submit {
+  display: inline-block;
+}
+
+.wpb-cf7form label {
+  display: block;
+}
+
+.wpb-cf7form > p:last-of-type {
+  margin: 0 !important;
+}

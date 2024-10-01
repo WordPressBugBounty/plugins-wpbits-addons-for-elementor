@@ -1,0 +1,58 @@
+.wpb-banner-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.wpb-banner-url {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: block;
+}
+
+.wpb-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+  z-index: 1;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.wpb-banner .wpb-banner-img {
+  width: 100%;
+  height: auto;
+}
+
+.wpb-banner-heading, .wpb-banner-subheading, .wpb-banner-content {
+  margin: 0;
+  padding: 0;
+}
+
+.wpb-banner-heading span, .wpb-banner-subheading span, .wpb-banner-content span {
+  display: inline-block;
+}
+
+.wpb-banner-divider {
+  height: 5px;
+  width: 100%;
+  max-width: 80px;
+  margin: 10px 0;
+}

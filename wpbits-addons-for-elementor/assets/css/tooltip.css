@@ -1,0 +1,198 @@
+#wpb-tooltip-popup {
+  cursor: default;
+  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: #333;
+  border-color: rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  color: #fff;
+  display: none;
+  padding: 10px;
+  position: absolute;
+  z-index: 2147483647;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+#wpb-tooltip-popup:before {
+  content: attr(class) " ";
+  position: absolute;
+  height: 0;
+  width: 0;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+#wpb-tooltip-popup.n:before,
+#wpb-tooltip-popup.s:before {
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  left: 50%;
+  margin-left: -5px;
+}
+
+#wpb-tooltip-popup.e:before,
+#wpb-tooltip-popup.w:before {
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+  margin-top: -5px;
+  top: 50%;
+}
+
+#wpb-tooltip-popup.n:before,
+#wpb-tooltip-popup.ne:before,
+#wpb-tooltip-popup.nw:before {
+  bottom: -10px;
+}
+
+#wpb-tooltip-popup.n:before,
+#wpb-tooltip-popup.ne:before,
+#wpb-tooltip-popup.nw:before,
+#wpb-tooltip-popup.nw-alt:before,
+#wpb-tooltip-popup.ne-alt:before {
+  border-top-color: inherit;
+  border-top-style: solid;
+  border-top-width: 10px;
+}
+
+#wpb-tooltip-popup.e:before {
+  border-right-color: inherit;
+  border-right-style: solid;
+  border-right-width: 10px;
+  left: -10px;
+}
+
+#wpb-tooltip-popup.s:before,
+#wpb-tooltip-popup.se:before,
+#wpb-tooltip-popup.sw:before {
+  top: -10px;
+}
+
+#wpb-tooltip-popup.s:before,
+#wpb-tooltip-popup.se:before,
+#wpb-tooltip-popup.sw:before,
+#wpb-tooltip-popup.sw-alt:before,
+#wpb-tooltip-popup.se-alt:before {
+  border-bottom-color: inherit;
+  border-bottom-style: solid;
+  border-bottom-width: 10px;
+}
+
+#wpb-tooltip-popup.w:before {
+  border-left-color: inherit;
+  border-left-style: solid;
+  border-left-width: 10px;
+  right: -10px;
+}
+
+#wpb-tooltip-popup.ne:before,
+#wpb-tooltip-popup.se:before {
+  border-right: 10px solid transparent;
+  border-left: 0;
+  left: 10px;
+}
+
+#wpb-tooltip-popup.nw:before,
+#wpb-tooltip-popup.sw:before {
+  border-left: 10px solid transparent;
+  border-right: 0;
+  right: 10px;
+}
+
+#wpb-tooltip-popup.nw-alt:before,
+#wpb-tooltip-popup.ne-alt:before,
+#wpb-tooltip-popup.sw-alt:before,
+#wpb-tooltip-popup.se-alt:before {
+  bottom: -10px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  left: 10px;
+}
+
+#wpb-tooltip-popup.ne-alt:before {
+  left: auto;
+  right: 10px;
+}
+
+#wpb-tooltip-popup.sw-alt:before,
+#wpb-tooltip-popup.se-alt:before {
+  border-top: none;
+  bottom: auto;
+  top: -10px;
+}
+
+#wpb-tooltip-popup.se-alt:before {
+  left: auto;
+  right: 10px;
+}
+
+#wpb-tooltip-popup img {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+#wpb-tooltip-popup h1, #wpb-tooltip-popup h2, #wpb-tooltip-popup h3, #wpb-tooltip-popup h4, #wpb-tooltip-popup h5, #wpb-tooltip-popup h6 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+#wpb-tooltip-popup p {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#wpb-tooltip-popup p:last-child {
+  margin-bottom: 0 !important;
+}
+
+#wpb-tooltip-popup a {
+  text-decoration: underline;
+}
+
+.wpb-tooltip-type-text,
+.wpb-tooltip-type-icon {
+  display: inline-block;
+}
+
+.wpb-tooltip-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wpb-tooltip-wrapper i {
+  text-align: center;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+.wpb-tooltip-wrapper svg {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.wpb-tooltip-type-image,
+.wpb-tooltip-type-shortcode {
+  display: block;
+}
+
+.wpb-tooltip-type-image img {
+  vertical-align: bottom;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.animated.fast {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+}

@@ -1,0 +1,87 @@
+.wpb-dropdown-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wpb-dropdown,
+.wpb-dd-button {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  line-height: 1;
+  max-width: 100%;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+
+.wpb-dd-button {
+  overflow: hidden;
+  vertical-align: middle;
+}
+.wpb-dd-button i {
+  padding-left: 5px;
+}
+
+.wpb-dd-menu {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  list-style: none !important;
+  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  overflow: hidden;
+}
+.wpb-dd-menu.wpb-dd-menu-right {
+  top: 0%;
+  left: 100%;
+}
+.wpb-dd-menu.wpb-dd-menu-left {
+  top: 0%;
+  right: 100%;
+}
+.wpb-dd-menu.wpb-dd-menu-top {
+  bottom: 100%;
+  left: 0;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.wpb-dd-menu.wpb-dd-menu-bottom {
+  top: 100%;
+  left: 0;
+}
+.wpb-dd-menu.wpb-dd-menu-opened {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.wpb-dd-menu li {
+  padding: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.wpb-dd-menu li:last-child {
+  border: none !important;
+}
+.wpb-dd-menu li a {
+  display: block;
+  padding: 15px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.wpb-dd-menu li a:hover {
+  background-color: #eee;
+}
