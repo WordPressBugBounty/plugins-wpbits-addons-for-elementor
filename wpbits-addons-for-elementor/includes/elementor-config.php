@@ -716,15 +716,6 @@ function wpbits_afe_admin_style() {
 add_action( "elementor/editor/after_enqueue_styles", "wpbits_afe_admin_style", 10, 1 );
 
 /**
-* Allow SVG files 
-*/	
-function wpbits_afe_mime_types( $mimes ) {
-    $mimes['svg'] = 'image/svg+xml';
-    return $mimes;
-}
-add_filter( 'upload_mimes', 'wpbits_afe_mime_types' );
- 
-/**
  * 
  * Get data
  * 

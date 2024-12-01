@@ -1502,7 +1502,7 @@ class Widget_WPBITS_AFE_Banner extends Widget_Base {
 					echo '</span></' . Utils::validate_html_tag($settings['sub_heading_html_tag']) . '>';
 				} 
 				if ($settings['image']['url']) {
-					echo '<img class="wpb-banner-img" src="' . $settings['image']['url'] . '">';
+					echo '<img class="wpb-banner-img" src="' . esc_url($settings['image']['url']) . '">';
 				} 
 				if ($settings['content']) {
 					echo '<' . Utils::validate_html_tag($settings['content_html_tag']) . ' class="wpb-banner-content"><span>';

@@ -766,19 +766,21 @@ class Widget_WPBITS_AFE_Button extends Widget_Base {
         <?php } else { ?>
         <div class="wpb-btn-wrapper">
             <a id="<?php echo esc_attr($settings['btn_id']); ?>" class="<?php echo esc_attr($settings['size']); ?> <?php echo esc_attr($settings['skin']); ?>" href="<?php echo esc_url($settings['website_link']['url']); ?>" <?php echo $target; ?> <?php echo $nofollow; ?>>
-				<?php 
-				if ($settings['icon_switcher']) {
-					if ($icon_position == 'before') {
-						\Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] );
-						echo esc_html($settings['text']);
+				<span>
+					<?php 
+					if ($settings['icon_switcher']) {
+						if ($icon_position == 'before') {
+							\Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] );
+							echo esc_html($settings['text']);
+						} else {
+							echo esc_html($settings['text']); 
+							\Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] );
+						}
 					} else {
-						echo esc_html($settings['text']); 
-						\Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] );
-					}
-				} else {
-					echo esc_html($settings['text']);
-				} 
-				?>
+						echo esc_html($settings['text']);
+					} 
+					?>
+				</span>
             </a>
         </div>
         <?php } ?>

@@ -18,7 +18,7 @@ final class WPBITS_AFE {
 	 *
 	 * @var string
 	 */
-	public $version = '1.5.1';
+	public $version = '1.6';
 
 	/**
 	 * The single instance of the class.
@@ -137,7 +137,7 @@ final class WPBITS_AFE {
 	 */
 	public function includes() {
 
-		if( isset( $_GET["page"] ) && (	"wpbits_afe_settings" == $_GET["page"] || "wpbits_afe_welcome" == $_GET["page"] ) ){
+		if( (isset( $_GET["page"] ) && ( "wpbits_afe_settings" == $_GET["page"] || "wpbits_afe_welcome" == $_GET["page"] ) ) || ( isset( $_POST["action"] ) && "wpbits_afe_settings" == $_POST["action"] ) ){
 			if ( file_exists( dirname( WPBITS_AFE_PLUGIN_FILE ) . '/includes/cmb2/init.php' ) ) {
 				require_once dirname( WPBITS_AFE_PLUGIN_FILE ) . '/includes/cmb2/init.php';
 			} elseif ( file_exists(  dirname( WPBITS_AFE_PLUGIN_FILE ) . '/includes/CMB2/init.php' ) ) {

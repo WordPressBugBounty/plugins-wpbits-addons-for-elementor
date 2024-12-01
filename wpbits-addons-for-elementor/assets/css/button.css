@@ -1,4 +1,4 @@
-div:not(.wpbits-slider-buttons) .wpb-btn-wrapper [class^="wpb-btn-"] {
+div:not(.wpbits-slider-buttons) .wpb-btn-wrapper [class^="wpb-btn-"] > span {
   position: relative;
   text-decoration: none !important;
   z-index: 0;
@@ -12,6 +12,16 @@ div:not(.wpbits-slider-buttons) .wpb-btn-wrapper [class^="wpb-btn-"] {
 }
 
 .wpb-btn-wrapper a {
+  position: relative;
+  text-decoration: none !important;
+  z-index: 0;
+  overflow: hidden;
+  display: inline-block;
+  line-height: 1;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+.wpb-btn-wrapper a span {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -19,7 +29,7 @@ div:not(.wpbits-slider-buttons) .wpb-btn-wrapper [class^="wpb-btn-"] {
       -ms-flex-align: center;
           align-items: center;
 }
-.wpb-btn-wrapper a svg {
+.wpb-btn-wrapper a span svg {
   height: 1em;
   fill: currentColor;
 }

@@ -483,7 +483,7 @@ class Widget_WPBITS_AFE_Shape extends Widget_Base {
         ?>
 		<div class="wpb-custom-shape-wrapper elementor-animation-<?php echo esc_attr($settings['shape_animation']); ?>">
         <div class="wpb-custom-shape" style="border-radius:<?php echo esc_attr($settings['shape_value_1']['size']); ?>% <?php echo esc_attr($settings['shape_value_2']['size']); ?>% <?php echo esc_attr($settings['shape_value_3']['size']); ?>% <?php echo esc_attr($settings['shape_value_4']['size']); ?>% / <?php echo esc_attr($settings['shape_value_5']['size']); ?>% <?php echo esc_attr($settings['shape_value_6']['size']); ?>% <?php echo esc_attr($settings['shape_value_7']['size']); ?>% <?php echo esc_attr($settings['shape_value_8']['size']); ?>% "><?php \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); ?>
-		<?php if ($settings['website_link']['url']) { echo '<a class="wpb-custom-shape-link" href="' . $settings['website_link']['url'] . '"' . $target . $nofollow . '></a>'; } ?>
+		<?php if ($settings['website_link']['url']) { echo '<a class="wpb-custom-shape-link" href="' . esc_url($settings['website_link']['url']) . '"' . $target . $nofollow . '></a>'; } else { echo '<a class="wpb-custom-shape-link" href="' . esc_url($settings['website_link']['url']) . '"' . $target . $nofollow . '></a>'; } ?>
 		</div>
         </div>
         <?php

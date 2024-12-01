@@ -2,8 +2,8 @@
 Contributors: WPBits
 Tags: elementor addons, elementor extensions, elementor modules, elementor widgets, template library
 Requires at least: 5.6
-Tested up to: 6.5.4
-Stable tag: 1.5.1
+Tested up to: 6.7.1
+Stable tag: 1.6
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -76,6 +76,13 @@ Pro Widgets & Features
 2. WPBits Template Library
 
 == Changelog ==
+
+= 1.6 =
+* Updated 3rd party dependencies
+* Minor security improvements
+
+= 1.5.2 =
+* Button widget underline position fix
 
 = 1.5.1 =
 * Updated Freemius framework
