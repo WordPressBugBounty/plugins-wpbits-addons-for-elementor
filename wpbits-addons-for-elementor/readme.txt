@@ -3,7 +3,7 @@ Contributors: WPBits
 Tags: elementor addons, elementor extensions, elementor modules, elementor widgets, template library
 Requires at least: 5.6
 Tested up to: 6.7.1
-Stable tag: 1.6
+Stable tag: 1.7
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -76,6 +76,9 @@ Pro Widgets & Features
 2. WPBits Template Library
 
 == Changelog ==
+
+= 1.7 =
+* Improved Elementor 3.26+ compatibility
 
 = 1.6 =
 * Updated 3rd party dependencies

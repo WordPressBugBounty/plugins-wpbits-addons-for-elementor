@@ -679,7 +679,6 @@ class Widget_WPBITS_AFE_Banner extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'heading_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-banner-heading',
 			]
 		);
@@ -898,7 +897,6 @@ class Widget_WPBITS_AFE_Banner extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'sub_heading_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-banner-subheading',
 			]
 		);
@@ -1127,7 +1125,6 @@ class Widget_WPBITS_AFE_Banner extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'content_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-banner-content',
 			]
 		);
@@ -1235,7 +1232,6 @@ class Widget_WPBITS_AFE_Banner extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'btn_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-btn-wrapper a',
 			]
 		);

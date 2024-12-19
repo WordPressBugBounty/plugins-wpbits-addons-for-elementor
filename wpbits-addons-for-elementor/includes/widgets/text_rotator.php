@@ -174,7 +174,6 @@ class Widget_WPBITS_AFE_Text_rotator extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'text_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-anim-text-wrapper',
 			]
 		);
@@ -271,7 +270,6 @@ class Widget_WPBITS_AFE_Text_rotator extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'anim_text_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-anim-text-wrapper .wpb-anim-text span',
 			]
 		);

@@ -220,7 +220,6 @@ class Widget_WPBITS_AFE_Business_Hours extends Widget_Base {
 			[
                 'label' => esc_html__( 'Typography', 'wpbits-addons-for-elementor' ),
 				'name' => 'title_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-business-hours-title',
 			]
 		);
@@ -458,7 +457,6 @@ class Widget_WPBITS_AFE_Business_Hours extends Widget_Base {
 			[
                 'label' => esc_html__( 'Day Typography', 'wpbits-addons-for-elementor' ),
 				'name' => 'day_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-business-day',
 			]
 		);
@@ -513,7 +511,6 @@ class Widget_WPBITS_AFE_Business_Hours extends Widget_Base {
 			[
                 'label' => esc_html__( 'Time Typography', 'wpbits-addons-for-elementor' ),
 				'name' => 'time_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-business-time',
 			]
 		);

@@ -758,7 +758,6 @@ class Widget_WPBITS_AFE_Team_Member extends Widget_Base {
 			[
 				'name' => 'title_typography',
 				'label' => esc_html__( 'Typography', 'wpbits-addons-for-elementor' ),
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-team-overlay .wpb-team-title',
 			]
 		);
@@ -876,7 +875,6 @@ class Widget_WPBITS_AFE_Team_Member extends Widget_Base {
 			[
 				'name' => 'subtitle_typography',
 				'label' => esc_html__( 'Typography', 'wpbits-addons-for-elementor' ),
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-team-overlay .wpb-team-subtitle',
 			]
 		);

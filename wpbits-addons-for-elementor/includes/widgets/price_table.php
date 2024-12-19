@@ -661,7 +661,6 @@ class Widget_WPBITS_AFE_Price_Table extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'header_title_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-price-table-title',
 			]
 		);
@@ -710,7 +709,6 @@ class Widget_WPBITS_AFE_Price_Table extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'header_desc_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-price-table-desc',
 			]
 		);
@@ -920,7 +918,6 @@ class Widget_WPBITS_AFE_Price_Table extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'ribbon_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-price-table-ribbon,{{WRAPPER}} .wpb-price-table-vertical,{{WRAPPER}} .wpb-price-table-horizontal',
 			]
 		);
@@ -1215,7 +1212,6 @@ class Widget_WPBITS_AFE_Price_Table extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'pricing_prefix_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-price-table-price-prefix',
 			]
 		);
@@ -1271,7 +1267,6 @@ class Widget_WPBITS_AFE_Price_Table extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'pricing_price_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-price-table-price-value',
 			]
 		);
@@ -1353,7 +1348,6 @@ class Widget_WPBITS_AFE_Price_Table extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'pricing_suffix_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-price-table-price-suffix',
 			]
 		);
@@ -1409,7 +1403,6 @@ class Widget_WPBITS_AFE_Price_Table extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'pricing_original_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-price-table-original-price',
 			]
 		);
@@ -1465,7 +1458,6 @@ class Widget_WPBITS_AFE_Price_Table extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'pricing_period_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-price-table-period',
 			]
 		);
@@ -1496,7 +1488,6 @@ class Widget_WPBITS_AFE_Price_Table extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'features_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} ul.wpb-price-table-features li span',
 			]
 		);
@@ -1688,7 +1679,6 @@ class Widget_WPBITS_AFE_Price_Table extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'btn_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-btn-wrapper a',
 			]
 		);
@@ -1939,7 +1929,6 @@ class Widget_WPBITS_AFE_Price_Table extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'footer_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-price-table-footer-desc',
 			]
 		);

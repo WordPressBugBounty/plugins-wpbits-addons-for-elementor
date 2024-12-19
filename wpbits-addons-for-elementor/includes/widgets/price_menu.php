@@ -303,7 +303,6 @@ class Widget_WPBITS_AFE_Price_Menu extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'title_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-price-menu-name',
 			]
 		);
@@ -404,7 +403,6 @@ class Widget_WPBITS_AFE_Price_Menu extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'price_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-price-menu-price',
 			]
 		);
@@ -578,7 +576,6 @@ class Widget_WPBITS_AFE_Price_Menu extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'desc_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-price-menu-description',
 			]
 		);

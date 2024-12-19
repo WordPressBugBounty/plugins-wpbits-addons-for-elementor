@@ -335,7 +335,6 @@ class Widget_WPBITS_AFE_Piechart extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'percent_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-piechart-percent'
 			]
 		);
@@ -373,7 +372,6 @@ class Widget_WPBITS_AFE_Piechart extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'percent_sign_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-piechart-percent span'
 			]
 		);
@@ -424,7 +422,6 @@ class Widget_WPBITS_AFE_Piechart extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'title_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-piechart-title'
 			]
 		);

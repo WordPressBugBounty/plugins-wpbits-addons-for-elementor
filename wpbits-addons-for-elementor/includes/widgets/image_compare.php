@@ -448,7 +448,6 @@ class Widget_WPBITS_AFE_Image_Compare extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'label_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .twentytwenty-before-label:before,{{WRAPPER}} .twentytwenty-after-label:before',
 			]
         );

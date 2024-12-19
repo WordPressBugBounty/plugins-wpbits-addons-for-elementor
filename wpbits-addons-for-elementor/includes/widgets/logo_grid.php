@@ -615,7 +615,6 @@ class Widget_WPBITS_AFE_Logo_Grid extends Widget_Base {
 			[
                 'label' => esc_html__( 'Typography', 'wpbits-addons-for-elementor' ),
 				'name' => 'tooltip_text_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '#wpb-tooltip-popup.wpb-tooltip-{{ID}}, #wpb-tooltip-popup.wpb-tooltip-{{ID}} p'
 			]
 		);

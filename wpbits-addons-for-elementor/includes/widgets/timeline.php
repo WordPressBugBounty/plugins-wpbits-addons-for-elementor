@@ -237,7 +237,6 @@ class Widget_WPBITS_AFE_Timeline extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'box_global_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpbits-afe-timeline',
 			]
 		);
@@ -494,7 +493,6 @@ class Widget_WPBITS_AFE_Timeline extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'title_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpbits-afe-timeline-content-heading',
 			]
 		);
@@ -596,7 +594,6 @@ class Widget_WPBITS_AFE_Timeline extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'desc_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpbits-afe-timeline-content-desc',
 			]
 		);
@@ -760,7 +757,6 @@ class Widget_WPBITS_AFE_Timeline extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'date_global_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpbits-afe-timeline-date',
 			]
 		);
@@ -887,7 +883,6 @@ class Widget_WPBITS_AFE_Timeline extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'date_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .date-1',
 			]
 		);
@@ -1015,7 +1010,6 @@ class Widget_WPBITS_AFE_Timeline extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'date_2_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .date-2',
 			]
 		);

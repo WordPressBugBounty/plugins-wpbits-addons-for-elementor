@@ -557,7 +557,6 @@ class Widget_WPBITS_AFE_Photo_Gallery extends Widget_Base {
 			[
 				'name' => 'caption_typography',
 				'label' => esc_html__( 'Typography', 'wpbits-addons-for-elementor' ),
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-gallery-overlay .wpb-gallery-text',
 			]
 		);

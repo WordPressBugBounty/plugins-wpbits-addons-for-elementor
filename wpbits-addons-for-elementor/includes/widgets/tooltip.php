@@ -706,7 +706,6 @@ class Widget_WPBITS_AFE_Tooltip extends Widget_Base {
 			[
                 'label' => esc_html__( 'Heading Typography', 'wpbits-addons-for-elementor' ),
 				'name' => 'tooltip_heading_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '#wpb-tooltip-popup.wpb-tooltip-{{ID}} h1,#wpb-tooltip-popup.wpb-tooltip-{{ID}} h2,#wpb-tooltip-popup.wpb-tooltip-{{ID}} h3,#wpb-tooltip-popup.wpb-tooltip-{{ID}} h4,#wpb-tooltip-popup.wpb-tooltip-{{ID}} h5,#wpb-tooltip-popup.wpb-tooltip-{{ID}} h6',
 			]
 		);
@@ -730,7 +729,6 @@ class Widget_WPBITS_AFE_Tooltip extends Widget_Base {
 			[
                 'label' => esc_html__( 'Text Typography', 'wpbits-addons-for-elementor' ),
 				'name' => 'tooltip_text_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '#wpb-tooltip-popup.wpb-tooltip-{{ID}}, #wpb-tooltip-popup.wpb-tooltip-{{ID}} p'
 			]
 		);

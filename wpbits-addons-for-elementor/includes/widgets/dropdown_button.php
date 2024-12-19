@@ -287,7 +287,6 @@ class Widget_WPBITS_AFE_Dropdown_Button extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-dd-button',
 			]
 		);
@@ -571,7 +570,6 @@ class Widget_WPBITS_AFE_Dropdown_Button extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'dropdown_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-dd-menu li a',
 			]
 		);

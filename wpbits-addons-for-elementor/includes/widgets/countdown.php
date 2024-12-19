@@ -469,7 +469,6 @@ class Widget_WPBITS_AFE_Countdown extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'digit_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} span.wpb-countdown-value'
 			]
 		);
@@ -507,7 +506,6 @@ class Widget_WPBITS_AFE_Countdown extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'label_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} span.wpb-countdown-label'
 			]
 		);
@@ -557,7 +555,6 @@ class Widget_WPBITS_AFE_Countdown extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'msg_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-countdown-msg'
 			]
 		);
@@ -622,7 +619,6 @@ class Widget_WPBITS_AFE_Countdown extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'days_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} div.wpb-countdown-days span.wpb-countdown-value'
 			]
 		);
@@ -660,7 +656,6 @@ class Widget_WPBITS_AFE_Countdown extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'days_label_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} div.wpb-countdown-days span.wpb-countdown-label'
 			]
 		);
@@ -725,7 +720,6 @@ class Widget_WPBITS_AFE_Countdown extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'hours_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} div.wpb-countdown-hours span.wpb-countdown-value'
 			]
 		);
@@ -763,7 +757,6 @@ class Widget_WPBITS_AFE_Countdown extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'hours_label_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} div.wpb-countdown-hours span.wpb-countdown-label'
 			]
 		);
@@ -828,7 +821,6 @@ class Widget_WPBITS_AFE_Countdown extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'minutes_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} div.wpb-countdown-minutes span.wpb-countdown-value'
 			]
 		);
@@ -866,7 +858,6 @@ class Widget_WPBITS_AFE_Countdown extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'minutes_label_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} div.wpb-countdown-minutes span.wpb-countdown-label'
 			]
 		);
@@ -931,7 +922,6 @@ class Widget_WPBITS_AFE_Countdown extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'seconds_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} div.wpb-countdown-seconds span.wpb-countdown-value'
 			]
 		);
@@ -969,7 +959,6 @@ class Widget_WPBITS_AFE_Countdown extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'seconds_label_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} div.wpb-countdown-seconds span.wpb-countdown-label'
 			]
 		);

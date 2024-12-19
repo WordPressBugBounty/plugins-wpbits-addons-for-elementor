@@ -458,7 +458,6 @@ class Widget_WPBITS_AFE_Accordion extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'title_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-accordions .wpbaccordion__head,{{WRAPPER}} .wpbaccordion__head button',
 			]
 		);
@@ -832,7 +831,6 @@ class Widget_WPBITS_AFE_Accordion extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'content_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-accordions .wpbaccordion__body,{{WRAPPER}} .wpbaccordion__body p',
 			]
 		);

@@ -114,7 +114,6 @@ class Widget_WPBITS_AFE_Heading extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpbits-heading',
 			]
 		);
@@ -413,7 +412,6 @@ class Widget_WPBITS_AFE_Heading extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'typography_dual',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpbits-heading em',
 			]
 		);

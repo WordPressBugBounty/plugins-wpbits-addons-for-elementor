@@ -273,7 +273,6 @@ class Widget_WPBITS_AFE_Hotspot extends Widget_Base {
 			[
                 'label' => esc_html__( 'Content Typography', 'wpbits-addons-for-elementor' ),
 				'name' => 'typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .spot-content',
 			]
 		);        
@@ -295,7 +294,6 @@ class Widget_WPBITS_AFE_Hotspot extends Widget_Base {
 			[
                 'label' => esc_html__( 'Heading Typography', 'wpbits-addons-for-elementor' ),
 				'name' => 'heading_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .wpbits-afe-hotspot-heading',                
 			]
         );  

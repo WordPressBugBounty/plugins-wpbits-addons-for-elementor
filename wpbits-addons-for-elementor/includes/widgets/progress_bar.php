@@ -378,7 +378,6 @@ class Widget_WPBITS_AFE_Progress_Bar extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'title_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-progress-bar-title'
 			]
 		);
@@ -431,7 +430,6 @@ class Widget_WPBITS_AFE_Progress_Bar extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'percent_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-progress-bar-percent,{{WRAPPER}} .wpb-progress-bar-percent-out'
 			]
 		);

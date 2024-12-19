@@ -237,7 +237,6 @@ class Widget_WPBITS_AFE_Button extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-btn-wrapper a',
 			]
 		);

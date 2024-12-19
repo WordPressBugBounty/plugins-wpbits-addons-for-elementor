@@ -162,7 +162,6 @@ class Widget_WPBITS_AFE_Icon_Box extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'title_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-icon-box-title'
 			]
 		);
@@ -268,7 +267,6 @@ class Widget_WPBITS_AFE_Icon_Box extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'text_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-icon-box-text'
 			]
 		);

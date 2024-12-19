@@ -3,7 +3,7 @@
  * Plugin Name: WPBits Addons For Elementor
  * Plugin URI: https://wpbits.net/
  * Description: Addons for Elementor Page Builder
- * Version: 1.6
+ * Version: 1.7
  * Author: WPBits
  * License: GPL3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt

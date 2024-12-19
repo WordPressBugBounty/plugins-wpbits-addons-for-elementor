@@ -540,7 +540,6 @@ class Widget_WPBITS_AFE_Testimonial extends Widget_Base {
 			[
 				'name' => 'content_font_typography',
 				'label' => esc_html__( 'Typography', 'wpbits-addons-for-elementor' ),
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-testimonials-content,{{WRAPPER}} .wpb-testimonials-content p',
 			]
 		);
@@ -567,7 +566,6 @@ class Widget_WPBITS_AFE_Testimonial extends Widget_Base {
 			[
 				'name' => 'content_heading_typography',
 				'label' => esc_html__( 'Heading Typography', 'wpbits-addons-for-elementor' ),
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-testimonials-content h1,{{WRAPPER}} .wpb-testimonials-content h2,{{WRAPPER}} .wpb-testimonials-content h3,{{WRAPPER}} .wpb-testimonials-content h4,{{WRAPPER}} .wpb-testimonials-content h5,{{WRAPPER}} .wpb-testimonials-content h6',
 			]
 		);
@@ -835,7 +833,6 @@ class Widget_WPBITS_AFE_Testimonial extends Widget_Base {
 			[
 				'name' => 'title_typography',
 				'label' => esc_html__( 'Typography', 'wpbits-addons-for-elementor' ),
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-testimonials-title',
 			]
 		);
@@ -907,7 +904,6 @@ class Widget_WPBITS_AFE_Testimonial extends Widget_Base {
 			[
 				'name' => 'subtitle_typography',
 				'label' => esc_html__( 'Typography', 'wpbits-addons-for-elementor' ),
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-testimonials-subtitle',
 			]
 		);

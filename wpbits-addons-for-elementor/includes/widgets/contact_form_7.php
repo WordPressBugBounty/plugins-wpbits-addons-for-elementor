@@ -216,7 +216,6 @@ class Widget_WPBITS_AFE_Contact_Form_7 extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'label_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-cf7form,{{WRAPPER}} .wpb-cf7form p,{{WRAPPER}} .wpb-cf7form label',
 			]
 		);
@@ -315,7 +314,6 @@ class Widget_WPBITS_AFE_Contact_Form_7 extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'title_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpbits-cf7-title',
 			]
 		);
@@ -403,7 +401,6 @@ class Widget_WPBITS_AFE_Contact_Form_7 extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'subtitle_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpbits-cf7-subtitle',
 			]
 		);
@@ -480,7 +477,6 @@ class Widget_WPBITS_AFE_Contact_Form_7 extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'input_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-cf7form input:not(.wpcf7-submit),{{WRAPPER}} .wpb-cf7form textarea'
 			]
 		);
@@ -730,7 +726,6 @@ class Widget_WPBITS_AFE_Contact_Form_7 extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'btn_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-cf7form input.wpcf7-submit',
 			]
 		);
@@ -961,7 +956,6 @@ class Widget_WPBITS_AFE_Contact_Form_7 extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'tip_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} span.wpcf7-not-valid-tip',
 			]
 		);
@@ -1062,7 +1056,6 @@ class Widget_WPBITS_AFE_Contact_Form_7 extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'msg_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} div.wpcf7-response-output',
 			]
 		);

@@ -620,7 +620,6 @@ class Widget_WPBITS_AFE_Login_Form extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'title_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpbits-login-form-title',
 			]
 		);
@@ -708,7 +707,6 @@ class Widget_WPBITS_AFE_Login_Form extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'subtitle_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpbits-login-form-subtitle',
 			]
 		);
@@ -796,7 +794,6 @@ class Widget_WPBITS_AFE_Login_Form extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'label_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} #wpb_login_form label'
 			]
 		);
@@ -874,7 +871,6 @@ class Widget_WPBITS_AFE_Login_Form extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'input_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} #wpb_login_form input:not(.button),{{WRAPPER}} #wpb_login_form textarea'
 			]
 		);
@@ -1135,7 +1131,6 @@ class Widget_WPBITS_AFE_Login_Form extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'btn_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} #wp-submit',
 			]
 		);
@@ -1396,7 +1391,6 @@ class Widget_WPBITS_AFE_Login_Form extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'links_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} ul.wpb-login-form-links li'
 			]
 		);
@@ -1497,7 +1491,6 @@ class Widget_WPBITS_AFE_Login_Form extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'logged_in_msg_typography',
-				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .wpb-loggedout-msg'
 			]
 		);
