@@ -709,7 +709,8 @@ class Widget_WPBITS_AFE_Logo_Grid extends Widget_Base {
             	$img_array = wp_get_attachment_image_src($item['image']['id'], $settings['img_size'], true);
             	$img_url = $img_array[0];
 				$img_alt = get_post_meta( $item['image']['id'], '_wp_attachment_image_alt', true );
-				$img_caption = wp_get_attachment_caption($item['image']['id']);
+				// Sanitize caption to prevent XSS when PowerTip JS re-uses the decoded value
+				$img_caption = wp_kses_post( wp_get_attachment_caption($item['image']['id']) );
 			}
             ?>
 			<div id="wpb-logo-<?php echo esc_attr($item['_id']); ?>" class="wpb-logo-grid-item">

@@ -362,14 +362,9 @@ class Widget_WPBITS_AFE_Text_rotator extends Widget_Base {
         if ( $settings['list'] ) {
         ?>
         <?php echo '<' . Utils::validate_html_tag($settings['html_tag']) . ' class="wpb-anim-text-wrapper">'; ?>
-        <span class="wpb-anim-text-prefix"><?php echo esc_html($settings['prefix_text']); ?></span>
-        <span class="wpb-anim-text" style="display:none;" data-txtanim="<?php echo esc_attr($settings['anim']); ?>" data-animduration="<?php echo esc_attr($settings['anim_duration']); ?>">
-        <?php $last_key = end($settings['list']); ?>    
-        <?php foreach ( $settings['list'] as $item ) { ?> 
-        <?php echo esc_html($item['title']); ?><?php if ($item != $last_key) { ?> | <?php } ?>
-        <?php } ?>
-        </span>    
-        <span class="wpb-anim-text-suffix"><?php echo esc_html($settings['suffix_text']); ?></span>
+        <span class="wpb-anim-text-prefix"><?php echo esc_html( sanitize_text_field( $settings['prefix_text'] ) ); ?></span>
+        <span class="wpb-anim-text" style="display:none;" data-txtanim="<?php echo esc_attr(sanitize_text_field($settings['anim'])); ?>" data-animduration="<?php echo esc_attr($settings['anim_duration']); ?>"><?php $last_key = end($settings['list']); ?><?php foreach ( $settings['list'] as $item ) { ?> <?php echo htmlspecialchars( $item['title'] ); ?><?php if ($item != $last_key) { ?> | <?php } ?><?php } ?></span>
+        <span class="wpb-anim-text-suffix"><?php echo esc_html( sanitize_text_field( $settings['suffix_text'] ) ); ?></span>
         <?php echo '</' . Utils::validate_html_tag($settings['html_tag']) . '>'; ?>
 	<?php }
     } 

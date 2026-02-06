@@ -585,8 +585,11 @@ class Widget_WPBITS_AFE_Image_Compare extends Widget_Base {
         $settings = $this->get_settings_for_display();
         $before_img_url = \Elementor\Utils::get_placeholder_image_src();
         $after_img_url = \Elementor\Utils::get_placeholder_image_src();
-        $before_label = $settings['before_label'];
-        $after_label = $settings['after_label'];
+        
+        // Sanitize labels: strip HTML tags to prevent XSS when JS re-uses the decoded value
+        $before_label = sanitize_text_field( $settings['before_label'] );
+        $after_label = sanitize_text_field( $settings['after_label'] );
+        
 		if ($settings['before_image']['url'] != $before_img_url) {
             $before_img_array = wp_get_attachment_image_src($settings['before_image']['id'], $settings['img_size'], true);
             $before_img_url = $before_img_array[0];
@@ -601,6 +604,9 @@ class Widget_WPBITS_AFE_Image_Compare extends Widget_Base {
         if (empty($after_label)) {
             $after_label = esc_html__( 'After', 'wpbits-addons-for-elementor' );
         }
+
+		$before_label = esc_html(htmlspecialchars($before_label, ENT_QUOTES, 'UTF-8'));
+		$after_label = esc_html(htmlspecialchars($after_label, ENT_QUOTES, 'UTF-8'));
         ?>
         <div class="wpb-image-compare">
             <div class="twentytwenty-container" data-orientation="<?php echo esc_attr($settings['orientation']); ?>" data-moveover="<?php echo esc_attr($settings['move_overlay']); ?>" data-overlay="<?php echo esc_attr($settings['overlay']); ?>" data-offset="<?php echo esc_attr($settings['offset']); ?>" data-afterlabel="<?php echo esc_attr($after_label); ?>" data-beforelabel="<?php echo esc_attr($before_label); ?>">

@@ -848,14 +848,17 @@ class Widget_WPBITS_AFE_Tooltip extends Widget_Base {
         $target = $settings['website_link']['is_external'] ? ' target="_blank"' : '';
 		$nofollow = $settings['website_link']['nofollow'] ? ' rel="nofollow"' : '';
 		
+		// Sanitize tooltip content to prevent XSS while allowing safe HTML formatting
+		$tooltip_content = wp_kses_post( htmlspecialchars($settings['tooltip_content']) );
+		
         ?>
         <div class="wpb-tooltip-wrapper" data-tpid="wpb-tooltip-<?php echo esc_attr($this->get_id()); ?> animated fast <?php echo esc_attr($settings['anim']); ?>" data-followmouse="<?php echo esc_attr($settings['follow_mouse']); ?>" data-motp="<?php echo esc_attr($settings['mouse_on_to_popup']); ?>" data-placement="<?php echo esc_attr($settings['placement']); ?>" data-smart="<?php echo esc_attr($settings['smart_placement']); ?>" data-offset="<?php echo esc_attr($settings['offset']); ?>">
         <?php
         if ($url) {
-            $open_tag = '<a href="' . esc_url($url) . '" ' . $target . $nofollow . ' class="wpb-tooltip wpb-tooltip-type-' . sanitize_html_class($settings['content_type']) . '" data-powertip="' . esc_attr($settings['tooltip_content']) . '">';
+            $open_tag = '<a href="' . esc_url($url) . '" ' . $target . $nofollow . ' class="wpb-tooltip wpb-tooltip-type-' . sanitize_html_class($settings['content_type']) . '" data-powertip="' . esc_attr($tooltip_content) . '">';
             $close_tag = '</a>';
         } else {
-            $open_tag = '<div class="wpb-tooltip wpb-tooltip-type-' . sanitize_html_class($settings['content_type']) . '" data-powertip="' . esc_attr($settings['tooltip_content']) . '">';
+            $open_tag = '<div class="wpb-tooltip wpb-tooltip-type-' . sanitize_html_class($settings['content_type']) . '" data-powertip="' . esc_attr($tooltip_content) . '">';
             $close_tag = '</div>';
         }
         echo $open_tag;

@@ -785,7 +785,8 @@ class Widget_WPBITS_AFE_Photo_Gallery extends Widget_Base {
 						$img_url = $img_array[0];
 					}
 
-					$img_caption = wp_get_attachment_caption($image['id']);
+					// Sanitize caption to prevent XSS when lightbox JS re-uses the decoded value
+					$img_caption = wp_kses_post( wp_get_attachment_caption($image['id']) );
 					?> 
 					<div class="wpb-masonry-item">
 						<a class="wpb-gallery-item elementor-animation-<?php echo esc_attr($settings['thumbnail_animation']); ?>" href="<?php echo esc_url($image['url']); ?>" data-caption="<?php echo esc_attr($img_caption); ?>" data-elementor-open-lightbox="no">
