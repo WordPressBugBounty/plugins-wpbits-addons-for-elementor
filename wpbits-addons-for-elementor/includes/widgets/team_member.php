@@ -1188,12 +1188,12 @@ class Widget_WPBITS_AFE_Team_Member extends Widget_Base {
                     <div class="wpb-team-overlay elementor-animation-<?php echo esc_attr($settings['box_content_animation']); ?>  <?php if ($settings['overflow_hidden']) { echo 'no-overlay'; } ?>">
                         <div class="wpb-team-texts">
                             <?php if ($settings['member_name']) { ?>
-                            <div class="wpb-team-title <?php if (($settings['title_entrance_animation']) && ($settings['title_entrance_animation'] != 'none')) { ?>animated wpb-hide<?php } ?> <?php echo sanitize_html_class($settings['title_entrance_animation_duration']); ?>" data-animation="<?php echo esc_attr($settings['title_entrance_animation']); ?>" data-exit="<?php echo $this->get_anim_exits($settings['title_entrance_animation']); ?>">
+                            <div class="wpb-team-title <?php if (($settings['title_entrance_animation']) && ($settings['title_entrance_animation'] != 'none')) { ?>animated wpb-hide<?php } ?> <?php echo sanitize_html_class($settings['title_entrance_animation_duration']); ?>" data-animation="<?php echo esc_attr($settings['title_entrance_animation']); ?>" data-exit="<?php echo esc_attr( $this->get_anim_exits($settings['title_entrance_animation']) ); ?>">
                                 <span><?php echo esc_html($settings['member_name']); ?></span>
                             </div>
                             <?php } ?>
                             <?php if ($settings['subtitle']) { ?>
-                            <div class="wpb-team-subtitle <?php if (($settings['subtitle_entrance_animation']) && ($settings['subtitle_entrance_animation'] != 'none')) { ?>animated wpb-hide<?php } ?> <?php echo sanitize_html_class($settings['subtitle_entrance_animation_duration']); ?>" data-animation="<?php echo esc_attr($settings['subtitle_entrance_animation']); ?>" data-exit="<?php echo $this->get_anim_exits($settings['subtitle_entrance_animation']); ?>">
+                            <div class="wpb-team-subtitle <?php if (($settings['subtitle_entrance_animation']) && ($settings['subtitle_entrance_animation'] != 'none')) { ?>animated wpb-hide<?php } ?> <?php echo sanitize_html_class($settings['subtitle_entrance_animation_duration']); ?>" data-animation="<?php echo esc_attr($settings['subtitle_entrance_animation']); ?>" data-exit="<?php echo esc_attr( $this->get_anim_exits($settings['subtitle_entrance_animation']) ); ?>">
                                 <span><?php echo esc_html($settings['subtitle']); ?></span>
                             </div>
                             <?php } ?>
@@ -1227,7 +1227,26 @@ class Widget_WPBITS_AFE_Team_Member extends Widget_Base {
             );
             ?>
             <?php $oembed = wp_oembed_get( $settings['oembed'], $args ); ?>
-            <?php echo ( $oembed ) ? $oembed : $settings['oembed']; ?>
+            <?php
+            if ( $oembed ) {
+                echo $oembed;
+            } else {
+                // Not an oEmbed URL: older content may hold a pasted <iframe> embed code.
+                // Allow a plain iframe with http(s) src, but nothing that can run script.
+                $allowed_embed = wp_kses_allowed_html( 'post' );
+                $allowed_embed['iframe'] = array(
+                    'src'             => true,
+                    'width'           => true,
+                    'height'          => true,
+                    'title'           => true,
+                    'frameborder'     => true,
+                    'allow'           => true,
+                    'allowfullscreen' => true,
+                    'loading'         => true,
+                );
+                echo wp_kses( $settings['oembed'], $allowed_embed );
+            }
+            ?>
             </div>
             <?php } elseif (($settings['lightbox_image']['url']) && ($settings['lightbox_style'] == 'img')) { ?>
             <?php $lightbox_image_url = wp_get_attachment_image_url( $settings['lightbox_image']['id'], 'full' );  ?>
@@ -1237,7 +1256,7 @@ class Widget_WPBITS_AFE_Team_Member extends Widget_Base {
             <?php } ?>
             <?php if ($box_content) { ?>
             <div class="wpb-lightbox-content" style="max-width:<?php echo esc_attr($settings['box_width']); ?>px;background-color:<?php echo esc_attr($settings['lightbox_bg_color']); ?>;padding:<?php echo esc_attr($settings['lightbox_spacing']['top'] . $settings['lightbox_spacing']['unit']); ?> <?php echo esc_attr($settings['lightbox_spacing']['right'] . $settings['lightbox_spacing']['unit']); ?> <?php echo esc_attr($settings['lightbox_spacing']['bottom'] . $settings['lightbox_spacing']['unit']); ?> <?php echo esc_attr($settings['lightbox_spacing']['left'] . $settings['lightbox_spacing']['unit']); ?>">
-                <?php echo do_shortcode($box_content); ?>
+                <?php echo do_shortcode( wp_kses_post( $box_content ) ); ?>
             </div>
             <?php } ?>
         </div>

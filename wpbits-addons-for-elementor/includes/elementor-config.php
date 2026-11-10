@@ -729,17 +729,34 @@ function wpbits_afe_get_data( $data ) {
     if( $data['istheme'] == "local" ){
         if( strpos($data["tid"], "wpb-pro-") !== false ){
             $pro_templates = apply_filters( "WPBITS_AFE_PRO_LIB", array() );
-            $response = wp_remote_get( $pro_templates[ str_replace("wpb-pro-","",$data["tid"] ) ]->templateUrl );     
+            $pro_tid = str_replace("wpb-pro-","",$data["tid"] );
+            if( ! isset( $pro_templates[ $pro_tid ]->templateUrl ) ){
+                return rest_ensure_response( false );
+            }
+            $response = wp_remote_get( $pro_templates[ $pro_tid ]->templateUrl );
         }else{
             $response = wp_remote_get( WPBITS_AFE_PLUGINS_URL ."assets/js/templates/template-".$data["tid"].".json" ); 
         }
     }else{
         $theme_templates = apply_filters( "WPBITS_AFE_THEME_LIB", array() );
-        $response = wp_remote_get( $theme_templates[$data["tid"]]["templateUrl"] );     
+        if( ! isset( $theme_templates[$data["tid"]]["templateUrl"] ) ){
+            return rest_ensure_response( false );
+        }
+        $response = wp_remote_get( $theme_templates[$data["tid"]]["templateUrl"] );
+    }
+
+    if( is_wp_error( $response ) ){
+        return rest_ensure_response( false );
+    }
+
+    $template = json_decode( wp_remote_retrieve_body( $response ), true );
+
+    if( ! is_array( $template ) ){
+        return rest_ensure_response( false );
     }
 
     // process json
-    $response = wpbits_process_json( json_decode( $response["body"], true ) );
+    $response = wpbits_process_json( $template );
 
     return rest_ensure_response( $response );    
 }
@@ -754,7 +771,9 @@ function wpbits_afe_rest_route() {
         'methods' => 'GET',
         'callback' => 'wpbits_afe_get_data',
         'permission_callback' => function() {
-            return current_user_can( 'edit_posts' );
+            // Importing a template sideloads its images into the media library,
+            // so the caller needs the upload capability, not just edit_posts.
+            return current_user_can( 'edit_posts' ) && current_user_can( 'upload_files' );
         },
         'args' => array(
             'tid' => array( 
@@ -967,7 +986,7 @@ function wpbits_process_json( $response, $collect = "" ){
     add_filter( "WPBITS_AFE_PRO_LIB", function( $WPBL_Templates ){
 
         // Check for transient, if none, grab remote file
-        if ( false === ( $data = get_transient( 'wpbits-afe-pro-tmplts' ) ) ) {
+        if ( false === ( $data = get_transient( 'wpbits-afe-pro-lib' ) ) ) {
  
             $site_url = urlencode(strtr(get_site_url(),array("http://" => "", "https://" => "","/" => "#")));
             $file_content = wp_remote_get( 'https://wpbits.net/wp-json/wpbits-afe-pro/prod/'.rand(1,15).'-'. $site_url );

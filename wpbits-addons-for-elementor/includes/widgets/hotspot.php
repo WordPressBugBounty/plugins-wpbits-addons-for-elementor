@@ -436,8 +436,8 @@ class Widget_WPBITS_AFE_Hotspot extends Widget_Base {
                                     </div> 			
                                 ',								
                                     ! empty( $item["title"] ) ? sprintf('<%1$s class="wpbits-afe-hotspot-heading">%2$s</%1$s>',Utils::validate_html_tag($settings["html_tag"]),esc_html($item["title"])) : "",
-                                    ! empty( $item["content"] ) ? sprintf('<div class="wpbits-afe-hotspot-content">%1$s</div>',$this->parse_text_editor($item["content"])) : "",
-                                    'elementor-repeater-item-'.$item["_id"]
+                                    ! empty( $item["content"] ) ? sprintf('<div class="wpbits-afe-hotspot-content">%1$s</div>', $this->parse_text_editor( wp_kses_post( $item["content"] ) ) ) : "",
+                                    'elementor-repeater-item-' . esc_attr( $item["_id"] )
                                 );
 
                             }

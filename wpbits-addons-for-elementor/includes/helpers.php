@@ -155,21 +155,22 @@ if ( !function_exists( 'wpbits_afe_fs' ) ) {
         if ( !isset( $wpbits_afe_fs ) && !wpbits_afe_check_support() ) {
             require_once WPBITS_AFE_ABSPATH . 'freemius/start.php';
             $wpbits_afe_fs = fs_dynamic_init( array(
-                'id'             => '8193',
-                'slug'           => 'wpbits-addons-for-elementor',
-                'premium_slug'   => 'wpbits-addons-for-elementor-pro',
-                'type'           => 'plugin',
-                'public_key'     => 'pk_f2ccf50952cfc09cf4f0443d4ad4b',
-                'is_premium'     => false,
-                'premium_suffix' => 'Pro',
-                'has_addons'     => false,
-                'has_paid_plans' => true,
-                'menu'           => array(
+                'id'               => '8193',
+                'slug'             => 'wpbits-addons-for-elementor',
+                'premium_slug'     => 'wpbits-addons-for-elementor-pro',
+                'type'             => 'plugin',
+                'public_key'       => 'pk_f2ccf50952cfc09cf4f0443d4ad4b',
+                'is_premium'       => false,
+                'premium_suffix'   => 'Pro',
+                'has_addons'       => false,
+                'has_paid_plans'   => true,
+                'menu'             => array(
                     'slug'       => 'wpbits_afe_welcome',
                     'first-path' => 'admin.php?page=wpbits_afe_welcome',
                     'support'    => false,
                 ),
-                'is_live'        => true,
+                'is_live'          => true,
+                'is_org_compliant' => true,
             ) );
         }
         return $wpbits_afe_fs;

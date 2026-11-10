@@ -1051,7 +1051,7 @@ class Widget_WPBITS_AFE_Testimonial extends Widget_Base {
         ?>
         <div class="wpb-testimonials-item">
             <div class="wpb-testimonials-content <?php echo sanitize_html_class($settings['content_arrow']); ?>">
-                <?php echo $this->parse_text_editor($settings['content']); ?>
+                <?php echo $this->parse_text_editor( wp_kses_post( $settings['content'] ) ); ?>
             </div>
             <div class="wpb-testimonials-person">
                 <?php if ($img_url) { ?>

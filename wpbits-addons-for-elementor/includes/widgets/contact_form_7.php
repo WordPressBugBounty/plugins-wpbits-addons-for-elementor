@@ -1278,7 +1278,7 @@ class Widget_WPBITS_AFE_Contact_Form_7 extends Widget_Base {
             $cf7Forms = get_posts( $args );
             $form_id = $cf7Forms[0]->ID;
         } else {
-            $form_id = $settings['form'];
+            $form_id = absint( $settings['form'] );
         }
 		echo '<div class="wpb-form-wrapper"><div class="wpb-form-wrapper-inner">';
 		if ($settings['title']) {
@@ -1291,7 +1291,7 @@ class Widget_WPBITS_AFE_Contact_Form_7 extends Widget_Base {
 			echo esc_html($settings['subtitle']);
 			echo '</' . Utils::validate_html_tag($settings['subtitle_html_tag']) . '>';
 		}
-        echo do_shortcode('[contact-form-7 id="' . $form_id . '" title="' . get_the_title($form_id) . '" html_id="wpb-cf7form-' . $this->get_id() . '" html_class="wpb-cf7form"]');
+        echo do_shortcode('[contact-form-7 id="' . absint( $form_id ) . '" title="' . esc_attr( get_the_title($form_id) ) . '" html_id="wpb-cf7form-' . esc_attr( $this->get_id() ) . '" html_class="wpb-cf7form"]');
         echo '</div></div>';
         ?>
 

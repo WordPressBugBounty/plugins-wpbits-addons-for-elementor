@@ -682,7 +682,7 @@ class Widget_WPBITS_AFE_Icon_Box extends Widget_Base {
 
                     <?php
                         if( ! empty( $settings["desc"] ) ){
-                            printf('%2$s%1$s%3$s', $this->parse_text_editor($settings["desc"]), '<div class="wpb-icon-box-text">', '</div>' );
+                            printf('%2$s%1$s%3$s', $this->parse_text_editor( wp_kses_post( $settings["desc"] ) ), '<div class="wpb-icon-box-text">', '</div>' );
                         }                        
                     ?>
 

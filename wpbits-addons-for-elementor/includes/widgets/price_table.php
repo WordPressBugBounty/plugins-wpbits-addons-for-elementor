@@ -1999,7 +1999,7 @@ class Widget_WPBITS_AFE_Price_Table extends Widget_Base {
                     echo '</' . Utils::validate_html_tag($settings['html_tag']) . '>';
                 } ?>
                 <?php if ($settings['desc']) { ?>
-                <span class="wpb-price-table-desc"><?php echo $this->parse_text_editor($settings['desc']); ?></span>    
+                <span class="wpb-price-table-desc"><?php echo $this->parse_text_editor( wp_kses_post( $settings['desc'] ) ); ?></span>    
                 <?php } ?>
             </div>
             <div class="wpb-price-table-subheader">
@@ -2026,7 +2026,7 @@ class Widget_WPBITS_AFE_Price_Table extends Widget_Base {
             <div class="wpb-price-table-content">
                 <ul class="wpb-price-table-features">
                     <?php foreach ( $settings['list'] as $item ) { ?> 
-                    <li class="elementor-repeater-item-<?php echo esc_attr($item['_id']); ?>"><?php \Elementor\Icons_Manager::render_icon( $item['item_icon'], [ 'aria-hidden' => 'true' ] ); ?><span><?php echo $this->parse_text_editor($item['item_text']); ?></span></li>
+                    <li class="elementor-repeater-item-<?php echo esc_attr($item['_id']); ?>"><?php \Elementor\Icons_Manager::render_icon( $item['item_icon'], [ 'aria-hidden' => 'true' ] ); ?><span><?php echo $this->parse_text_editor( wp_kses_post( $item['item_text'] ) ); ?></span></li>
                     <?php } ?>
                 </ul>
             </div>

@@ -1051,7 +1051,8 @@ class Widget_WPBITS_AFE_Heading extends Widget_Base {
 		if( strpos($heading_output,"<mark") > -1 ){
 			$marker_style = is_numeric($settings["marker_style"]) && $settings["marker_style"] > 0 && $settings["marker_style"] <= 5 ? intval($settings["marker_style"]) : 1;
 
-			$marker_svg = file_get_contents( WPBITS_AFE_PLUGINS_URL . 'assets/img/marker-' . $marker_style .".svg" );
+			// Read the bundled marker from disk instead of fetching it over HTTP.
+			$marker_svg = file_get_contents( WPBITS_AFE_ABSPATH . 'assets/img/marker-' . $marker_style . '.svg' );
 			$marker_svg = str_replace('<svg ','<svg preserveAspectRatio="none" ',$marker_svg);
 
 			$heading_output = str_replace("</mark>",$marker_svg."</mark>",$heading_output);

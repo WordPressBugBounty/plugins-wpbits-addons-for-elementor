@@ -2,8 +2,8 @@
 Contributors: WPBits
 Tags: elementor addons, elementor extensions, elementor modules, elementor widgets, template library
 Requires at least: 5.6
-Tested up to: 6.7.1
-Stable tag: 1.8.1
+Tested up to: 7.1
+Stable tag: 1.8.2
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -76,6 +76,13 @@ Pro Widgets & Features
 2. WPBits Template Library
 
 == Changelog ==
+
+= 1.8.2 =
+* Security: fixed cross-site scripting (XSS) issues in several widgets that could be exploited by logged-in users with Contributor access or higher. Updating is strongly recommended.
+* Security: additional output hardening across widgets.
+* Fixed a fatal error in the Login Form widget when a logout redirect is set.
+* Updated Freemius SDK to 2.13.5.
+* Tested with WordPress 7.1.
 
 = 1.8.1 =
 * Minor security improvements.

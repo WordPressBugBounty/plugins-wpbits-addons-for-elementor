@@ -1116,7 +1116,7 @@ class Widget_WPBITS_AFE_Timeline extends Widget_Base {
 								',
 								! empty( $item["image"] ) ? sprintf('<figure class="wpbits-afe-timeline-content-image">%1$s</figure>', Group_Control_Image_Size::get_attachment_image_html( $item ) ) : "",
 								! empty( $item["title"] ) ? sprintf('<%1$s class="wpbits-afe-timeline-content-heading">%2$s</%1$s>',Utils::validate_html_tag($settings["html_tag"]),esc_html($item["title"])) : "",
-								! empty( $item["desc"] ) ? sprintf('<div class="wpbits-afe-timeline-content-desc">%1$s</div>',$this->parse_text_editor($item["desc"])) : "",
+								! empty( $item["desc"] ) ? sprintf('<div class="wpbits-afe-timeline-content-desc">%1$s</div>', $this->parse_text_editor( wp_kses_post( $item["desc"] ) ) ) : "",
 								! empty( $date ) ? sprintf('<div class="wpbits-afe-timeline-date">%1$s</div>',$date) : ""								
 							);
 

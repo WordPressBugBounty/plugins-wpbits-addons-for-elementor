@@ -1605,11 +1605,11 @@ class Widget_WPBITS_AFE_Login_Form extends Widget_Base {
         } elseif ($settings['loggedin_msg_switcher']) { 
             $current_user = wp_get_current_user();
             $redirect_logout = get_permalink();
-            if ($settings['redirect_logout_link_switcher']) {
-                $redirect_logout = esc_url($settings['redirect_logout_link']);
+            if ($settings['redirect_logout_link_switcher'] && ! empty( $settings['redirect_logout_link']['url'] )) {
+                $redirect_logout = esc_url_raw($settings['redirect_logout_link']['url']);
             }
         ?>    
-        <div class="wpb-loggedout-msg"><?php echo $this->parse_text_editor($settings['loggedin_msg']) . esc_html( $current_user->user_login ); ?> <a href="<?php echo wp_logout_url($redirect_logout); ?>"><?php esc_html_e( '(Logout)', 'wpbits-addons-for-elementor' ); ?></a></div>
+        <div class="wpb-loggedout-msg"><?php echo $this->parse_text_editor( wp_kses_post( $settings['loggedin_msg'] ) ) . esc_html( $current_user->user_login ); ?> <a href="<?php echo esc_url( wp_logout_url($redirect_logout) ); ?>"><?php esc_html_e( '(Logout)', 'wpbits-addons-for-elementor' ); ?></a></div>
         <?php } ?>
 	<?php }
 }

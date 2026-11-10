@@ -719,7 +719,7 @@ class Widget_WPBITS_AFE_Logo_Grid extends Widget_Base {
 					<?php if ($item['website_link']['url']) { ?>
 					<a href="<?php echo esc_url($item['website_link']['url']); ?>" <?php echo esc_attr($target); ?> <?php echo esc_attr($nofollow); ?>>
 					<?php } ?>
-						<img src="<?php echo esc_url($img_url); ?>" class="wpb-tooltip wpb-tooltip-type-text" data-powertip="<?php echo esc_attr($img_caption); ?>" alt="<?php echo esc_attr($img_alt); ?>"/>
+						<img src="<?php echo esc_url($img_url); ?>" class="wpb-tooltip wpb-tooltip-type-text" data-powertip="<?php echo htmlspecialchars( $img_caption, ENT_QUOTES, 'UTF-8' ); ?>" alt="<?php echo esc_attr($img_alt); ?>"/>
 					<?php if ($item['website_link']['url']) { ?>
 					</a>
 					<?php } ?>

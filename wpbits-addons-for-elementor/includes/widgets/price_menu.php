@@ -789,7 +789,7 @@ class Widget_WPBITS_AFE_Price_Menu extends Widget_Base {
                 </div>
                 <?php if ($item['desc']) { ?>
                 <div class="wpb-price-menu-description">
-                    <?php echo $this->parse_text_editor($item['desc']); ?>
+                    <?php echo $this->parse_text_editor( wp_kses_post( $item['desc'] ) ); ?>
                 </div>
                 <?php } ?>
             </div>

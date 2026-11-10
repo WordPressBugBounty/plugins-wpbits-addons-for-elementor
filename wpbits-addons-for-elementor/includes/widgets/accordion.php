@@ -895,14 +895,14 @@ class Widget_WPBITS_AFE_Accordion extends Widget_Base {
         if ( $settings['list'] ) { ?>
             <div class="wpb-accordions <?php echo Plugin::instance()->experiments->is_feature_active( 'e_font_icon_svg' ) ? 'wbp-svg-icons' : '';?>" data-selfclose="<?php echo esc_attr($settings['self_close']); ?>" data-opensingle="<?php echo esc_attr($settings['open_single']); ?>" data-openspeed="<?php echo esc_attr($settings['open_speed']); ?>" data-closespeed="<?php echo esc_attr($settings['close_speed']); ?>" data-autoscroll="<?php echo esc_attr($settings['scroll']); ?>" data-scrollspeed="<?php echo esc_attr($settings['scroll_speed']); ?>" data-scrolloffset="<?php echo esc_attr($settings['scroll_offset']); ?>">
             <?php foreach ( $settings['list'] as $item ) { ?>   
-                <div id="wpb-<?php echo esc_attr($item['_id']) . $rand; ?>" <?php if ($settings['hash']) { ?>data-hash="#wpb-<?php echo esc_attr($item['_id']) . $rand; ?>"<?php } ?> class="wpbaccordion <?php echo esc_attr($item['status']); ?>" data-wpbaccordion-options='{"selfBlock": <?php echo esc_attr($item['self_block']); ?>}'>                					
+                <div id="wpb-<?php echo esc_attr($item['_id']) . $rand; ?>" <?php if ($settings['hash']) { ?>data-hash="#wpb-<?php echo esc_attr($item['_id']) . $rand; ?>"<?php } ?> class="wpbaccordion <?php echo esc_attr($item['status']); ?>" data-wpbaccordion-options='{"selfBlock": <?php echo ( 'true' === $item['self_block'] || true === $item['self_block'] ) ? 'true' : 'false'; ?>}'>                					
 					<<?php Utils::print_validated_html_tag($settings['html_tag'])?> <?php echo 'class="wpbaccordion__head"'?>>
 						<?php \Elementor\Icons_Manager::render_icon( $item['title_icon'], [ 'aria-hidden' => 'true' ] ); ?>
 						<?php if ($item['title_icon_txt']) { echo '<span class="wpbaccordion-prefix">' . esc_html($item['title_icon_txt']) . '</span>'; } ?>
 						<?php echo esc_html($item['title']); ?>
 					</<?php Utils::print_validated_html_tag($settings['html_tag'])?>>
                     <div class="wpbaccordion__body">
-                        <?php $this->print_text_editor($item['text']); ?>
+                        <?php echo $this->parse_text_editor( wp_kses_post( $item['text'] ) ); ?>
                     </div>
                 </div>
             <?php } ?>    

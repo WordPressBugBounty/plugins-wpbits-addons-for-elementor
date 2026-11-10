@@ -820,7 +820,7 @@ class Widget_WPBITS_AFE_Tabs extends Widget_Base {
 
                     <?php foreach ( $settings['list'] as $item ) : ?> 
 						<li <?php if ($menu_count == 0) { ?>class="is-open"<?php } ?> data-opentab="wpb-<?php echo esc_attr($item['_id']) . $rand; ?>">
-							<?php \Elementor\Icons_Manager::render_icon( $item['title_icon'], [ 'aria-hidden' => 'true' ] ); ?><?php echo $this->parse_text_editor($item['title']); ?>
+							<?php \Elementor\Icons_Manager::render_icon( $item['title_icon'], [ 'aria-hidden' => 'true' ] ); ?><?php echo $this->parse_text_editor( wp_kses_post( $item['title'] ) ); ?>
 						</li>
 						<?php $menu_count++; ?>
 					<?php endforeach; ?>
@@ -830,7 +830,7 @@ class Widget_WPBITS_AFE_Tabs extends Widget_Base {
 					
 					<?php foreach ( $settings['list'] as $item ) : ?>	
 						<div class="wpbaccordion-mobile-title <?php if ($tab_count == 0) { ?>is-open<?php } ?>" data-opentab="wpb-<?php echo esc_attr($item['_id']) . $rand; ?>">
-							<?php \Elementor\Icons_Manager::render_icon( $item['title_icon'], [ 'aria-hidden' => 'true' ] ); ?><?php echo $this->parse_text_editor($item['title']); ?>
+							<?php \Elementor\Icons_Manager::render_icon( $item['title_icon'], [ 'aria-hidden' => 'true' ] ); ?><?php echo $this->parse_text_editor( wp_kses_post( $item['title'] ) ); ?>
 						</div>	
 						
 						<div class="wpbaccordion wpb_tab_item <?php if ($tab_count == 0) { ?>is-open<?php } ?>" id="wpb-<?php echo esc_attr($item['_id']) . $rand; ?>" <?php if ($settings['hash']) { ?>data-hash="#wpb-<?php echo esc_attr($item['_id']) . $rand; ?>"<?php } ?>>
@@ -841,7 +841,7 @@ class Widget_WPBITS_AFE_Tabs extends Widget_Base {
 										<img src="<?php echo esc_url($item['image']['url']); ?>" alt="<?php echo esc_attr($item['title']); ?>" />
 									</div>
 									<?php } ?>
-									<div class="wpbaccordion-text"><?php echo $this->parse_text_editor($item['text']); ?></div>
+									<div class="wpbaccordion-text"><?php echo $this->parse_text_editor( wp_kses_post( $item['text'] ) ); ?></div>
 								</div>
 							</div>
 						</div>
